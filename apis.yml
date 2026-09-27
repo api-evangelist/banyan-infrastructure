@@ -1,23 +1,71 @@
 aid: banyan-infrastructure
+
 name: Banyan Infrastructure
-description: 'Banyan Infrastructure is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://framerusercontent.com/images/SJAtGkO47mbMzfaasv6YXe4auk.png
+
+description: Banyan Infrastructure provides project finance software for infrastructure funds, developers, and green banks. Their platform unifies
+  workflow and data across origination, underwriting, portfolio management, and compliance, accelerating capital flow into infrastructure projects.
+  The solution replaces fragmented systems like Salesforce and Excel with a single data layer, supporting owners, operators, and financiers.
+
 url: https://raw.githubusercontent.com/api-evangelist/banyan-infrastructure/refs/heads/main/apis.yml
+
 x-type: company
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: OpenAPI endpoint returned HTML page instead of a machine‑readable spec
+  evidence:
+  - url: https://trust.banyaninfrastructure.com/openapi.json
+    status: 200
+  checked: '2026-09-27'
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
-- Company
-apis: []
+- Finance
+- Infrastructure
+- Software
+- Project Finance
+- Green Energy
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/banyan-infrastructure-hosts.yml
+- type: PrivacyPolicy
+  url: https://banyaninfrastructure.com/privacy-policy
+- type: Newsroom
+  url: https://banyaninfrastructure.com/news
+- type: DomainSecurity
+  url: security/banyan-infrastructure-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://banyaninfrastructure.com/
+
+apis:
+- name: Banyan Infrastructure API
+  description: Banyan Infrastructure provides project finance software for infrastructure funds, developers, and green banks.
+  humanURL: https://banyaninfrastructure.com/
+  baseURL: null
+  aid: banyan-infrastructure:banyan-infrastructure-api
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
